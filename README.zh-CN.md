@@ -1,7 +1,7 @@
 # Inverst Agent（研究优先的量化技术栈）
 
 [English README](README.md)
-[Quick load README](quick_setup_zh.md)
+[快速使用说明](quick_setup_zh.md)
 
 **设计目标：** 构建能够在**知识前沿替代人工完成研究工作**的 Agent——能够自由探索并产出高质量研究结论。它们是 **Cursor、Trae、Aider、MCP** 等开源工具的高级使用者，而不是重复造轮子的重构者；同时它们被设计为支持**深度思考**：提出问题、辩论路径、判断证据。当前可运行的重点是 scheme phase，详见 [scheme phase blueprint](docs/experiments/scheme_phase/blueprint.md)。
 

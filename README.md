@@ -1,7 +1,7 @@
 # Inverst Agent (Research-First Quant Stack)
 
 [中文说明](README.zh-CN.md)
-[快速启动说明](quick_setup_zh.md)
+[快速使用说明](quick_setup_zh.md)
 
 **Design goal:** Agents that **replace humans** at the **frontier of knowledge** — freely exploring and delivering high-level research. They are **power users of open-source tools** (Cursor, Trae, Aider, MCP, etc.), not rebuilders of them, and they are built for **deep thinking**: framing questions, debating approaches, judging evidence. Current runnable focus is the scheme phase; see [scheme phase blueprint](docs/experiments/scheme_phase/blueprint.md).
 
