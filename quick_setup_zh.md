@@ -67,7 +67,7 @@ python scripts/run_research_session.py "设计一个新因子"
 生成的工程默认在：
 
 ```text
-/home/dtt/fitest/projects_generated/
+/home/foo/test/projects_generated/
 ```
 
 如果只想确认程序是否可启动，可先执行：
