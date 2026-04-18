@@ -1,8 +1,10 @@
-# 极简启动说明
+# 极简使用说明
 
 ## 1. 安装依赖
 
 ```bash
+git clone https://github.com/isomorphicor/finisher.git
+cd finisher
 pip install -r requirements.txt
 ```
 

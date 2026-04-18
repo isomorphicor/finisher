@@ -23,8 +23,8 @@ Inverst Agent is **CIO-led** (see `docs/policies/cio.md`): one orchestrating thr
 
 ### 1. Installation
 ```bash
-git clone https://github.com/your-org/inverst_agent.git
-cd inverst_agent
+git clone https://github.com/isomorphicor/finisher.git
+cd finisher
 pip install -r requirements.txt
 ```
 

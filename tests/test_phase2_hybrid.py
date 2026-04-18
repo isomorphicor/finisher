@@ -142,7 +142,7 @@ class TestPhase2Hybrid(unittest.TestCase):
                 "--output-dir",
                 str(repo),
             ]
-            cp = subprocess.run(cmd, cwd="/home/foo/test/inverst_agent", capture_output=True, text=True, check=True)
+            cp = subprocess.run(cmd, cwd="/home/foo/test/finisher", capture_output=True, text=True, check=True)
             payload = json.loads(cp.stdout.strip())
             self.assertEqual(payload["status"], "success")
             created = Path(payload["report"]["created"])
