@@ -1,0 +1,7 @@
+SMOKE EXPERIMENT — complete plan writing then minimal code writing.
+
+Scheme phase: Write all four required files under artifacts/ (research_plan.md, derivation.md, architecture_draft.md, experiment_design.md). Keep each file short but valid: include the usual headings expected by the workflow. Describe a trivial prediction setting (e.g. one feature → next-day label) so quant gates can be satisfied; if tabular/quant, name CatBoost as primary GBDT baseline in experiment_design.md per repo defaults.
+
+IDE phase: After prep, create exactly one file project/src/smoke_hello.py whose entire content is:
+print("smoke_ok")
+Use workspace_write or terminal as appropriate; do not skip the file.

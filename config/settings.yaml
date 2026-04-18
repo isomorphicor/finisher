@@ -1,0 +1,46 @@
+# Global settings: orchestration, paths, LLM, sandbox.
+# Domain-specific options (e.g. data sources, task params) belong in context packages or env.
+
+app:
+  name: "Inverst Agent"
+  version: "0.3.0"
+  debug: false
+  log_level: "INFO"
+
+# paths: loaded by core/config.py; paths.runs_dir is the default scheme session root (see core.scheme_paths).
+paths:
+  data_dir: "/home/dtt/fintest/data"
+  runs_dir: "/home/dtt/fintest/projects_generated"
+  # IDE/prep workspace when CLI omits --workspace-root (run_research_session, run_ide_execution_agent).
+  # Omit or leave null to use parent of runs_dir above (here: /home/dtt/fintest).
+  workspace_root: "/home/dtt/fintest"
+  skills_dir: "skills"
+  logs_dir: "logs"
+  processed_dir: "data/processed"
+
+llm:
+  provider: "openai"   # DeepSeek uses the OpenAI-compatible API; key is loaded from .env
+  default_model: "openai/deepseek-chat"
+  timeout: 60
+  max_retries: 3
+  max_profile_columns: 50    # cap columns in data_profile sent to LLM (context limit)
+  max_last_error_chars: 500  # cap last_error message length
+  openai:
+    api_base: "https://api.deepseek.com/v1"
+  ollama:
+    api_base: "http://localhost:11434"
+    default_model: "qwen3.5:latest"
+  # MLX 可选：本地推理更快（见 docs/inference_backends.md）；无 tools 时用 MLX，有 tools 时用 fallback_for_tools
+  mlx:
+    model_id: "mlx-community/Qwen3.5-9B-4bit"
+    fallback_for_tools: "ollama"
+
+# Default sandbox for context package execution (policy: docs/DEVELOPMENT_CONTRACT.md)
+sandbox:
+  profile: "research_project"
+  allowed_write_roots: ["/home/dtt/fintest/projects_generated/"]
+  allow_project_create: true
+  allow_network: false
+  max_runtime_seconds: 3600   # 1 hour for research (modeling/debugging)
+  max_disk_mb: 2048
+  dependency_policy: "requirements.txt-only"

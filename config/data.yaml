@@ -1,0 +1,16 @@
+# Data sources: optional default/example list for loaders (config/data.yaml).
+# Real runs often use data from context packages or project-local paths; override via env or task config.
+
+sources:
+  - name: "sample_processed"
+    type: "file"
+    path: "data/processed"
+    schema_map: {}
+    # Optional: Open->open, Date->date, etc. Omit to load raw column names.
+
+  # Example: two-file X+Y merge (adjust paths to your env)
+  # - name: "algo_alpha_processed"
+  #   type: "file"
+  #   files:
+  #     - "data/processed/DatasetAShare.parquet"
+  #     - "data/processed/hist_label.parquet"

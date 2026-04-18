@@ -1,0 +1,32 @@
+{
+  "schema_version": "knowledge_evidence_index_v1",
+  "notes": "Global evidence index. Keep only concise, high-signal entries.",
+  "items": [
+    {
+      "evidence_id": "bootstrap-0001",
+      "date": "2026-03-25",
+      "summary": "Initialized global knowledge layer templates.",
+      "paths": [
+        "knowledge/theory_snapshot.md",
+        "knowledge/decision_log.jsonl",
+        "knowledge/open_questions.md"
+      ],
+      "supports": [
+        "Use compact global knowledge instead of per-project document sprawl."
+      ]
+    },
+    {
+      "evidence_id": "knowledge-ide-lessons-v1",
+      "date": "2026-03-29",
+      "summary": "Promoted IDE/session lessons store (manual append per knowledge_promotion_checklist).",
+      "paths": [
+        "knowledge/ide_lessons.md",
+        "docs/templates/knowledge_promotion_checklist.md",
+        "docs/reference/agent_knowledge_system.md"
+      ],
+      "supports": [
+        "Session execution_report → reviewed lesson → knowledge/ide_lessons.md for cross-project reuse."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+# Optional prompt personas (models + system prompts). Not loaded by scheme-phase runtime.
+# Naming aligns with docs/roles/skill_contract.md (Layer 1 / Layer 2) and docs/agent/AGENTS.md.
+# Scheme-phase automation uses only `scheme_phase:` below (see core/scheme_agent.py).
+
+agents:
+  layer1_ingestion:
+    name: "Layer1"
+    role: "Ingestion & data contract"
+    model: "openai/deepseek-chat"
+    system_prompt: |
+      You operate as Layer 1 (ingestion): you own data contracts and quality at ingestion into standardized datasets.
+      You produce dataset artifacts and quality reports; you do not generate labels or task-specific feature engineering.
+      Use tools and loaders; enforce schema and fail closed on bad data. Align with docs/roles/skill_contract.md §8.1.
+
+  layer2_modeling:
+    name: "Layer2"
+    role: "Modeling & experiments"
+    model: "openai/deepseek-chat"
+    system_prompt: |
+      You operate as Layer 2 (modeling): you turn hypotheses into work plans and experiments using Layer 1 artifacts only.
+      You use available tools to produce evidence and training-ready data per task_spec. Align with docs/roles/skill_contract.md §8.2.
+
+  cio:
+    name: "CIO"
+    role: "Orchestrator & risk owner"
+    model: "openai/deepseek-chat"
+    system_prompt: |
+      You are the CIO (single orchestrator). You decompose requests into plans, choose gates, and sign off on delivery.
+      You own scheduling, evaluation, and final judgment. Implementation follows MD policy skills in docs/skills/manifest.json — not a buy-side org chart.
+
+# IDE execution agent (core/ide_agent.py): LLM + LocalIDEAdapter tools (read/write repo, allowlisted shell).
+# Model resolution (see core.scheme_agent.resolve_ide_execution_model): CLI --model > INVERST_CODER_MODEL >
+# INVERST_IDE_EXEC_AGENT_MODEL > ide_execution.coder_model (below) > scheme_phase.default_agent_model (fallback).
+# Core experiment: compact skills; use INVERST_IDE_SKILLS=full for full SKILL embeds.
+ide_execution:
+  coder_model: "openai/deepseek-chat"
+  # Write permission scope for IDE execution tools:
+  # - project (default): <session>/project/**  (recommended when runs live under paths.runs_dir)
+  # - session: <session>/**
+  # - repo: full Inverst checkout only when workspace_root is the repo root; else treated as project
+  write_scope: "project"
+  # Allowlisted terminal command base tokens for terminal_run.
+  # Override via INVERST_IDE_COMMAND_ALLOWLIST="python,python3,pytest,..."
+  command_allowlist:
+    - python
+    - python3
+    - pytest
+    - git
+    - make
+    - ls
+    - pwd
+    - echo
+    - env
+    - cd
+    - rg
+    - cat
+    - sed
+    - awk
+    - bash
+    - sh
+  # Non-English --task / Override is translated to English before the first user message (aligns with English system prompt).
+  translate_task_to_english: true
+  # Optional: dedicated model for that one translation call only; default = coder_model
+  # task_translate_model: "translategemma:27b"
+  skills_inject: compact
+  # IDE rules: core = docs/reference/ide_core_rules.md (default); extended = core + truncated ide_execution_rules.md
+  ide_rules_profile: core
+  # Max chars of ide_core_rules.md (env INVERST_IDE_CORE_RULES_MAX_CHARS wins).
+  ide_core_rules_max_chars: 12000
+  # Max chars of ide_execution_rules.md when ide_rules_profile=extended (env INVERST_IDE_RULES_MAX_CHARS wins).
+  ide_rules_max_chars: 32000
+  scheme_max_chars: 8000
+  data_first_skill_max_chars: 6000
+  session_skill_max_chars: 8000
+  llm_timeout_seconds: 900
+  tool_result_max_chars: 16384
+  artifact_read_max_chars: 98304
+
+# Chunked supervisor (scripts/run_supervisor_ide.py, core/supervisor_ide_loop.py): text-only CIO between IDE chunks.
+# Precedence for CIO model id: CLI --cio-model > INVERST_CIO_MODEL > supervisor.cio_model > agents.cio.model > settings llm.default_model.
+# Use a small/cheap tag for local Ollama experiments; set openai/gpt-4o-mini (or similar) when llm.provider is openai.
+supervisor:
+  cio_model: "openai/deepseek-chat"
+
+# Scheme-phase (used by core/scheme_agent.py, scripts/run_scheme_agent.py, core/task_runners.py).
+# Capability semantics come from docs/skills/manifest.json — not from adding entries under `agents:` above.
+scheme_phase:
+  auto_hire: true
+  # Default for the autonomous scheme agent main loop (refine, tool rounds, ideation).
+  # Override: CLI --model, or env INVERST_SCHEME_AGENT_MODEL.
+  default_agent_model: "openai/deepseek-chat"
+  translator:
+    model: "openai/deepseek-chat"
+  reviewers:
+    # Ordered by preference; the first is used unless overridden by CLI/env.
+    - model: "openai/deepseek-chat"
+      role: "reviewer_strong"
+    - model: "openai/deepseek-chat"
+      role: "reviewer_fast"

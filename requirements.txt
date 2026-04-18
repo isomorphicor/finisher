@@ -1,0 +1,36 @@
+# Core Dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+litellm>=1.0.0
+tenacity>=8.0.0  # required by litellm for retries
+pydantic>=2.0.0
+pyyaml>=6.0.0
+pytest>=8.0.0
+# Data Engineering & Skill Dependencies
+pyarrow>=14.0.0  # parquet fallback
+polars>=0.20.0  # fast I/O for large parquet/ftr (Rust backend)
+scikit-learn>=1.3.0  # scaling, encoding, feature selection
+joblib>=1.3.0  # persist scaler/encoder
+yfinance>=0.2.0
+requests>=2.31.0
+arxiv>=2.0.0
+scipy>=1.10.0  # For stats/experiments
+
+# Modeling
+catboost>=1.2.8
+
+# FFC Phase 2 (Encoder, Dynamics)
+torch>=2.0.0
+
+# MLX (optional – for efficient local inference, see docs/inference_backends.md)
+# Install one per platform (https://ml-explore.github.io/mlx/build/html/install.html):
+#   macOS (Apple Silicon):  pip install mlx
+#   Linux + NVIDIA:        pip install "mlx[cuda12]"   # or mlx[cuda13]
+#   Linux CPU-only:        pip install "mlx[cpu]"
+# Optional local benchmarking helpers were removed to keep repo minimal.
+mlx>=0.31.0
+
+# Optional
+# rich>=13.0.0  # For CLI UI

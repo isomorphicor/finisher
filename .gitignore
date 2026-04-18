@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+.mypy_cache/
+site-packages/
+bin/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Project specific
+.hf_cache/
+data/
+output/
+# Session outputs (scheme phase, IDE runs, local experiments) — not tracked
+/out/
+logs/
+artifacts/
+reports/
+results/
+runs/
+tmp_data/
+.local/
+.secrets/
+.cache/
+*.parquet
+*.arrow
+*.feather
+*.ftr
+*.npy
+*.npz
+*.pt
+*.pth
+*.joblib
+*.pickle
+*.pkl
+# CatBoost training logs/checkpoints (generated during model training; not project source)
+catboost_info/
+*.sqlite
+*.db
+*.csv
+*.tsv
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.7z
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.html
+*.ipynb
+.env
+config/local_*.yaml
+
+# Temp files
+temp/
+tmp/
+
+# Local-only notes (do not commit)
+docs/private/
+docs/*_private.md

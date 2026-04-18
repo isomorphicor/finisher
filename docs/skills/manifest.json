@@ -1,0 +1,414 @@
+{
+  "schema_version": "md_skill_registry_v1",
+  "skills": [
+    {
+      "id": "policy.quant-soul",
+      "name": "quant-soul",
+      "type": "policy",
+      "version": "1.3.1",
+      "path": "docs/skills/policy/quant-soul/SKILL.md",
+      "applies_to": [
+        "scheme_agent"
+      ],
+      "triggers": [
+        "quant",
+        "trading",
+        "portfolio",
+        "backtest",
+        "sharpe",
+        "drawdown",
+        "transaction cost",
+        "slippage",
+        "methodology",
+        "CPCV",
+        "time-safety"
+      ],
+      "links": [
+        "docs/policies/quant_soul.md",
+        "docs/reference/quant_tech_stack.md"
+      ]
+    },
+    {
+      "id": "policy.cio",
+      "name": "cio",
+      "type": "policy",
+      "version": "1.5.0",
+      "path": "docs/skills/policy/cio/SKILL.md",
+      "applies_to": [
+        "scheme_agent",
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "CIO",
+        "orchestrator",
+        "fund manager",
+        "portfolio manager",
+        "mandate",
+        "acceptance",
+        "sign-off"
+      ],
+      "links": [
+        "docs/policies/cio.md",
+        "docs/agent/AGENTS.md",
+        "docs/experiments/scheme_phase/blueprint.md",
+        "docs/roles/skill_contract.md"
+      ]
+    },
+    {
+      "id": "policy.data-scientist",
+      "name": "data-scientist",
+      "type": "policy",
+      "version": "1.1.0",
+      "path": "docs/skills/policy/data-scientist/SKILL.md",
+      "applies_to": [
+        "scheme_agent"
+      ],
+      "triggers": [
+        "data scientist",
+        "ETL",
+        "data dictionary",
+        "vendor data",
+        "crawler",
+        "lineage",
+        "data QA",
+        "features",
+        "data quality",
+        "data contract"
+      ],
+      "links": [
+        "docs/policies/cio.md",
+        "docs/policies/quant_soul.md",
+        "docs/roles/skill_contract.md"
+      ]
+    },
+    {
+      "id": "policy.quant-researcher",
+      "name": "quant-researcher",
+      "type": "policy",
+      "version": "1.1.0",
+      "path": "docs/skills/policy/quant-researcher/SKILL.md",
+      "applies_to": [
+        "scheme_agent"
+      ],
+      "triggers": [
+        "quant researcher",
+        "hypothesis",
+        "labeling",
+        "model acceptance",
+        "OOS",
+        "portfolio weights",
+        "backtest protocol",
+        "CPCV",
+        "research",
+        "factor",
+        "reward"
+      ],
+      "links": [
+        "docs/policies/quant_soul.md",
+        "docs/reference/quant_tech_stack.md",
+        "docs/policies/cio.md",
+        "docs/roles/skill_contract.md"
+      ]
+    },
+    {
+      "id": "policy.quant-dev",
+      "name": "quant-dev",
+      "type": "policy",
+      "version": "1.0.1",
+      "path": "docs/skills/policy/quant-dev/SKILL.md",
+      "applies_to": [
+        "scheme_agent"
+      ],
+      "triggers": [
+        "quant dev",
+        "backtest engine",
+        "simulation",
+        "broker API",
+        "OMS",
+        "execution adapter",
+        "signal to order",
+        "runbook",
+        "paper trading"
+      ],
+      "links": [
+        "docs/policies/quant_soul.md",
+        "docs/policies/cio.md",
+        "docs/roles/skill_contract.md"
+      ]
+    },
+    {
+      "id": "ops.scheme-phase",
+      "name": "scheme-phase",
+      "type": "ops",
+      "version": "1.3.0",
+      "path": "docs/skills/ops/scheme-phase/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "scheme phase",
+        "scheme",
+        "blueprint",
+        "experiment design"
+      ],
+      "links": [
+        "docs/experiments/scheme_phase/blueprint.md",
+        "docs/experiments/scheme_phase/workflow.md",
+        "docs/reference/ide_execution_rules.md"
+      ]
+    },
+    {
+      "id": "ops.add-md-skill",
+      "name": "add-md-skill",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/add-md-skill/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "add md skill",
+        "add policy skill",
+        "add ops skill"
+      ],
+      "links": [
+        "docs/skills/manifest.json",
+        "docs/DEVELOPMENT_CONTRACT.md"
+      ]
+    },
+    {
+      "id": "ops.add-python-skill",
+      "name": "add-python-skill",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/add-python-skill/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "add python skill",
+        "create skill template",
+        "install skill"
+      ],
+      "links": [
+        "scripts/create_skill_template.py",
+        "scripts/install_skill.py",
+        "scripts/list_skills.py",
+        "skills/registry/manifest.json",
+        "docs/guides/skill_catalog.md"
+      ]
+    },
+    {
+      "id": "ops.autonomous-research-loop",
+      "name": "autonomous-research-loop",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/autonomous-research-loop/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "autonomous research",
+        "self-iterating agent",
+        "promote experiment to skill"
+      ],
+      "links": [
+        "docs/experiments/autonomous_research/blueprint.md",
+        "docs/experiments/autonomous_research/workflow.md",
+        "docs/skills/manifest.json",
+        "scripts/check_repo_contract.py"
+      ]
+    },
+    {
+      "id": "ops.data-first-execution",
+      "name": "data-first-execution",
+      "type": "ops",
+      "version": "2.2.0",
+      "path": "docs/skills/ops/data-first-execution/SKILL.md",
+      "applies_to": [
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "EDA",
+        "data exploration",
+        "preprocessing",
+        "ide execution",
+        "session project"
+      ],
+      "links": [
+        "docs/reference/ide_core_rules.md",
+        "docs/experiments/scheme_phase/workflow.md",
+        "docs/experiments/scheme_phase/local_data_stocks.md"
+      ]
+    },
+    {
+      "id": "ops.session-project-code",
+      "name": "session-project-code",
+      "type": "ops",
+      "version": "2.0.0",
+      "path": "docs/skills/ops/session-project-code/SKILL.md",
+      "applies_to": [
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "session project",
+        "MPS",
+        "Metal",
+        "paths",
+        "portable scripts"
+      ],
+      "links": [
+        "docs/skills/ops/data-first-execution/SKILL.md"
+      ]
+    },
+    {
+      "id": "ops.cognitive-research-flow",
+      "name": "cognitive-research-flow",
+      "type": "ops",
+      "version": "1.0.3",
+      "path": "docs/skills/ops/cognitive-research-flow/SKILL.md",
+      "applies_to": [
+        "scheme_agent",
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "probe",
+        "pilot",
+        "cost benefit",
+        "research strategy",
+        "multi-label",
+        "HPC",
+        "scale out",
+        "finite compute",
+        "experiment economics"
+      ],
+      "links": [
+        "docs/skills/ops/data-first-execution/SKILL.md",
+        "docs/policies/quant_soul.md",
+        "docs/reference/quant_tech_stack.md"
+      ]
+    },
+    {
+      "id": "ops.research-orchestration",
+      "name": "research-orchestration",
+      "type": "ops",
+      "version": "1.1.0",
+      "path": "docs/skills/ops/research-orchestration/SKILL.md",
+      "applies_to": [
+        "scheme_agent",
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "orchestration",
+        "research plan",
+        "mandate",
+        "phase order",
+        "EDA first",
+        "explore before scheme",
+        "full-stack",
+        "slice"
+      ],
+      "links": [
+        "docs/skills/README.md",
+        "docs/skills/ARCHITECTURE.md",
+        "docs/skills/ops/cognitive-research-flow/SKILL.md",
+        "docs/skills/ops/manual-supervisor-playbook/SKILL.md",
+        "docs/policies/cio.md"
+      ]
+    },
+    {
+      "id": "ops.manual-supervisor-playbook",
+      "name": "manual-supervisor-playbook",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/manual-supervisor-playbook/SKILL.md",
+      "applies_to": [
+        "scheme_agent",
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "supervisor",
+        "manual orchestration",
+        "compose entrypoints",
+        "L2 selection",
+        "stepwise research"
+      ],
+      "links": [
+        "docs/skills/ops/research-orchestration/SKILL.md",
+        "docs/skills/ARCHITECTURE.md",
+        "docs/policies/cio.md",
+        "core/research_session_pipeline.py"
+      ]
+    },
+    {
+      "id": "ops.information-collection",
+      "name": "information-collection",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/information-collection/SKILL.md",
+      "applies_to": [
+        "scheme_agent",
+        "ide_execution_agent",
+        "repo"
+      ],
+      "triggers": [
+        "literature",
+        "paper search",
+        "semantic scholar",
+        "arxiv",
+        "related work"
+      ],
+      "links": [
+        "core/paper_search.py",
+        "docs/guides/skill_catalog.md",
+        "docs/skills/ops/research-orchestration/SKILL.md"
+      ]
+    },
+    {
+      "id": "ops.promotion-decision-record",
+      "name": "promotion-decision-record",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/promotion-decision-record/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "promotion decision",
+        "promote to skill",
+        "decision record"
+      ],
+      "links": [
+        "docs/experiments/autonomous_research/templates/promotion_decision_record.md",
+        "docs/experiments/autonomous_research/workflow.md",
+        "scripts/check_repo_contract.py"
+      ]
+    },
+    {
+      "id": "ops.scaffold-promotion-record",
+      "name": "scaffold-promotion-record",
+      "type": "ops",
+      "version": "1.0.0",
+      "path": "docs/skills/ops/scaffold-promotion-record/SKILL.md",
+      "applies_to": [
+        "repo"
+      ],
+      "triggers": [
+        "scaffold promotion record",
+        "new promotion record",
+        "promotion record template"
+      ],
+      "links": [
+        "scripts/scaffold_promotion_record.py",
+        "docs/experiments/autonomous_research/templates/promotion_decision_record.md",
+        "docs/experiments/autonomous_research/records/README.md"
+      ]
+    }
+  ]
+}

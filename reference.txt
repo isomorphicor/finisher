@@ -1,0 +1,21 @@
+# 你已有的参考
+https://github.com/karpathy/autoresearch.git
+https://github.com/HKUDS/CLI-Anything.git
+https://github.com/VoltAgent/awesome-openclaw-skills.git
+
+# 主流 · 多智能体 / Agent 框架（高 star）
+https://github.com/langchain-ai/langchain.git            # ~85K★ 链式组件、500+ 集成、LangSmith 等
+https://github.com/langchain-ai/langgraph.git            # ~26K★ 图状态机、多 agent 编排、已 GA
+https://github.com/crewaiinc/crewai.git                  # ~46K★ 角色化 Crew、Flows、协作语义简单
+https://github.com/microsoft/autogen.git                 # ~55K★ 对话式多 agent，现独立为 AG2
+https://github.com/openai/openai-agents-python.git       # ~20K★ 官方轻量多 agent 工作流，多模型
+
+# 主流 · 深度研究 / RAG
+https://github.com/assafelovic/gpt-researcher.git        # ~26K★ 自主调研、多源汇总、带引用报告，DeepResearch 评测前列
+https://github.com/langchain-ai/open_deep_research.git   # 官方 Open Deep Research，多 LLM/搜索/MCP
+https://github.com/run-llama/llama_index.git             # ~35K★ RAG/检索、Agent 与工具编排
+
+# 主流 · 数据 / 量化 / 工具
+https://github.com/OpenBB-finance/OpenBB.git            # ~62K★ 金融数据统一层、API/MCP、分析师与 agent 消费
+https://github.com/polakowo/vectorbt.git                 # ~7K★ 向量化回测、NumPy/Numba、策略网格（roadmap BYOB 可对接）
+https://github.com/modelcontextprotocol/servers.git      # 官方 MCP 服务器目录，工具与数据接入标准
