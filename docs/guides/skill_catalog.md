@@ -1,4 +1,4 @@
-# Inverst Agent - Skill Catalog
+# finisher - Skill Catalog
 
 This document lists **Skills** (Tools) that agents can invoke.
 

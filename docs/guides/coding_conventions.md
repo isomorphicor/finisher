@@ -1,4 +1,4 @@
-# Inverst Agent - Coding Conventions
+# finisher - Coding Conventions
 
 This is the minimal SOP for contributing to this repo.
 

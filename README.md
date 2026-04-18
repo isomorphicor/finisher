@@ -1,4 +1,4 @@
-# Inverst Agent (Research-First Quant Stack)
+# finisher (Research-First Quant Stack)
 
 [中文说明](README.zh-CN.md)
 [快速使用说明](quick_setup_zh.md)
@@ -8,9 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-## What is Inverst Agent?
+## What is finisher?
 
-Inverst Agent is **CIO-led** (see `docs/policies/cio.md`): one orchestrating thread turns intent into blueprints and acceptance evidence—aligned with **single-operator** quant work (full stack, no fake departmental walls). **Implementation** routes through **MD policy skills** registered in `docs/skills/manifest.json` (e.g. data-scientist, quant-researcher, quant-dev, quant-soul) as **contracts**, not as separate “department” agents. Policies, `docs/reference/quant_tech_stack.md`, and `knowledge/` supply methodology and technique; optional **Layer 1 / Layer 2 / Reviewer** labels in `docs/agent/AGENTS.md` are shorthand only. Execution leans on **open-source tools and external agents** (e.g. Cursor/Trae). Core loop: **mandate → evidence → gates → sign-off.**
+finisher is **CIO-led** (see `docs/policies/cio.md`): one orchestrating thread turns intent into blueprints and acceptance evidence—aligned with **single-operator** quant work (full stack, no fake departmental walls). **Implementation** routes through **MD policy skills** registered in `docs/skills/manifest.json` (e.g. data-scientist, quant-researcher, quant-dev, quant-soul) as **contracts**, not as separate “department” agents. Policies, `docs/reference/quant_tech_stack.md`, and `knowledge/` supply methodology and technique; optional **Layer 1 / Layer 2 / Reviewer** labels in `docs/agent/AGENTS.md` are shorthand only. Execution leans on **open-source tools and external agents** (e.g. Cursor/Trae). Core loop: **mandate → evidence → gates → sign-off.**
 
 ## Key Features
 

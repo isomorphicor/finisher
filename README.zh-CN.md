@@ -1,4 +1,4 @@
-# Inverst Agent（研究优先的量化技术栈）
+# finisher（研究优先的量化技术栈）
 
 [English README](README.md)
 [快速使用说明](quick_setup_zh.md)
@@ -8,9 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-## 什么是 Inverst Agent？
+## 什么是 finisher？
 
-Inverst Agent 采用 **CIO 主导**的方式（见 `docs/policies/cio.md`）：由一条统一的编排线程把用户意图逐步转化为研究蓝图与验收证据——这与**单操作者**量化工作模式相匹配（全栈协同，而不是伪造“部门墙”）。**实现层**通过注册在 `docs/skills/manifest.json` 中的 **Markdown policy skills** 路由（例如 data-scientist、quant-researcher、quant-dev、quant-soul），它们是**阶段性合同**，而不是独立的“部门 Agent”。策略方法由 policies、`docs/reference/quant_tech_stack.md` 与 `knowledge/` 提供；`docs/agent/AGENTS.md` 中可选的 **Layer 1 / Layer 2 / Reviewer** 只是简写标签。执行阶段依赖**开源工具与外部 Agent**（例如 Cursor / Trae）。核心循环为：**mandate → evidence → gates → sign-off**。
+finisher 采用 **CIO 主导**的方式（见 `docs/policies/cio.md`）：由一条统一的编排线程把用户意图逐步转化为研究蓝图与验收证据——这与**单操作者**量化工作模式相匹配（全栈协同，而不是伪造“部门墙”）。**实现层**通过注册在 `docs/skills/manifest.json` 中的 **Markdown policy skills** 路由（例如 data-scientist、quant-researcher、quant-dev、quant-soul），它们是**阶段性合同**，而不是独立的“部门 Agent”。策略方法由 policies、`docs/reference/quant_tech_stack.md` 与 `knowledge/` 提供；`docs/agent/AGENTS.md` 中可选的 **Layer 1 / Layer 2 / Reviewer** 只是简写标签。执行阶段依赖**开源工具与外部 Agent**（例如 Cursor / Trae）。核心循环为：**mandate → evidence → gates → sign-off**。
 
 ## 关键特性
 

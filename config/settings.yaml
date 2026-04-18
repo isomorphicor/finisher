@@ -2,7 +2,7 @@
 # Domain-specific options (e.g. data sources, task params) belong in context packages or env.
 
 app:
-  name: "Inverst Agent"
+  name: "finisher"
   version: "0.3.0"
   debug: false
   log_level: "INFO"

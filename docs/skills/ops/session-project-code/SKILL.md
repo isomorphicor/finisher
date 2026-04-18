@@ -33,7 +33,7 @@ links:
 
 ### Purpose
 
-**Inverst Agent** owns **skills and runners** in this repository (`core/`, `docs/skills/`, `scripts/`).  
+**finisher** owns **skills and runners** in this repository (`core/`, `docs/skills/`, `scripts/`).  
 **Experiment code** lives under **`out/<name>/<id>/project/`** — session output, not framework source.
 
 **IDE behavioral rules** (SUBTASKS, EDA order, Override, scheme alignment, features vs HPO, glue style, baseline contract wording) are **not** repeated here — defaults live in **`docs/reference/ide_core_rules.md`** (embedded); extended detail in **`docs/reference/ide_execution_rules.md`**. **Backtest / Sharpe:** extended doc → **Tier R** — portfolio metrics from **realized** return series; **never** **`y_true` × normalized `y_pred`** as Sharpe unless scheme proves `y` is that tradable series.

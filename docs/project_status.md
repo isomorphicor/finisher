@@ -1,11 +1,11 @@
-# Inverst Agent - Project Status
+# finisher - Project Status
 
 **Active Memory for the AI Development Team.**
 This file tracks the current state, recent accomplishments, and immediate next steps.
 
 ## 1. High-Level Summary
 
-*   **Project Name**: Inverst Agent
+*   **Project Name**: finisher
 *   **Version**: 0.3.0 (Alpha)
 *   **Goal**: Build a research-first quant stack where the LLM plans/synthesizes and deterministic Skills produce evidence artifacts.
 *   **Current State**: **Scheme design only** + IDE for code/experiments. Primary entrypoint: `scripts/run_scheme_agent.py` (autonomous scheme agent) backed by `core/scheme_agent.py` and deterministic scheme-phase tool skills (`skills/scheme_phase.py`). Legacy non-autonomous runners have been removed to avoid drift.

@@ -37,7 +37,7 @@ class LLMConfig(BaseModel):
 
 class AppConfig(BaseModel):
     model_config = ConfigDict(extra="ignore")
-    name: str = "Inverst Agent"
+    name: str = "finisher"
     version: str = "0.1.0"
     debug: bool = False
     log_level: str = "INFO"
